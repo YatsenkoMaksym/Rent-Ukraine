@@ -41,16 +41,15 @@ Rentals that allow pets have the highest average and median prices, followed by 
 - Can we predict rental prices based on various features?
 
 ## Files
-`explore.ipynb`: Python scripts for cleaning and initial data analysis.
-`explore.sql`: SQL scripts for creating views for further Tableau visuals.
-`RentalReportUkraine.pbix`: PowerBI reports with visuals.
-`README.md`: a readme file.
-`images`: folder with images for README.md.
-This files are to big to be on github, you can find them on my [google drive]
-(https://drive.google.com/drive/folders/1qT2l6mCh3A59pGCO-LKB9kHq0-suFRFV?usp=sharing):
-`insert_data.sql` - SQL scripts for creating the database schema and inserting all the values
-`olx_no_pets.csv`: data about Olx rental listings, that do not allow pets.
-`olx_yes_pets.csv`: data about Olx rental listings, that do allow pets.
-`dim_ria.csv`: data about dim.ria rental listings.
-`lun.csv`: data about lun rental listings.
-`sql_ready.csv`: Prepared and cleaned, final version of rental data across all chosen rental websites.
+- `explore.ipynb`: Python scripts for cleaning and initial data analysis.
+- `explore.sql`: SQL scripts for creating views for further Tableau visuals.
+- `RentalReportUkraine.pbix`: PowerBI reports with visuals.
+- `README.md`: a readme file.
+- `images`: folder with images for README.md.
+This files are to big to be on github, you can find them on my [google drive](https://drive.google.com/drive/folders/1qT2l6mCh3A59pGCO-LKB9kHq0-suFRFV?usp=sharing):
+- `insert_data.sql` - SQL scripts for creating the database schema and inserting all the values
+- `olx_no_pets.csv`: data about Olx rental listings, that do not allow pets.
+- `olx_yes_pets.csv`: data about Olx rental listings, that do allow pets.
+- `dim_ria.csv`: data about dim.ria rental listings.
+- `lun.csv`: data about lun rental listings.
+- `sql_ready.csv`: Prepared and cleaned, final version of rental data across all chosen rental websites.
