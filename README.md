@@ -1,45 +1,56 @@
-# Unveiling Data Science Salary Trends: A Deep Dive into the Global Job Market
+# Ukraine Rent Prices Data Analyst Project
 
-This project will analyze the provided Data Science Salaries dataset to uncover key trends and factors influencing compensation in the data science field, offering valuable insights for aspiring and current data professionals.
+## Welcome to My Apartment Hunt Data Adventure!
 
-## 1. Project Objective
+Okay, so I've been thinking a lot about renting an apartment lately. You know, the usual: "Is this a good deal?", "Am I overpaying?", "Where can I find something decent that won't break the bank?". It hit me that instead of just endlessly scrolling through listings, I could actually use my data skills to answer these questions systematically. So, this project isn't just a technical exercise; it's my personal quest to understand the Ukrainian rental market better and, hopefully, find that perfect place (or at least help others do the same!).
 
-To identify and analyze the key factors (such as designation, experience, company size, remote work, and location) that influence Data Science salaries, and to visualize these trends to provide actionable insights.
+This project aims to perform a full data analysis cycle on apartment rental prices across Ukraine. We'll be scraping data from the most popular real estate platforms, cleaning it up, storing it, analyzing it, and finally visualizing it to uncover key insights.
 
-## 2. Key Questions to Answer
+## Short Overview of the results
+![Numeric Data Relation](images/price_numeric.png)
+Bigger rentals generally cost more. In the scatter plot for Price vs Size, there is an upward spread, indicating the moderate trend. Size however doesn't contribute to the price as much. 
 
-- How do Data Science salaries vary across different designations (e.g., Data Scientist, Data Engineer, Machine Learning Engineer, Data Analyst)?
-- What is the impact of experience level on salary?
-- Do company size and remote working ratio correlate with higher or lower salaries?
-- Are there significant salary differences based on employee location?
-- What are the overall salary trends over working years?
+![Origin](images/price_origin_dist.png)
+Listings from dim_ria have the highest average and median prices, lun listings follow with intermediate prices, and olx listings show the lowest average and median prices.
 
-## 3.Main Project Phases:
+![Pets](images/price_pets_dist.png)
+Rentals that allow pets have the highest average and median prices, followed by rentals that do not allow pets.
 
-1. **Python:**
-   1.1 Data Cleaning & Preprocessing: Transforming raw data into a clean, consistent, and usable format.
-   1.2 Exploratory Data Analysis: Discovering patterns, anomalies, and relationships within the data
-   1.3 Feature Engineering: preparing it for deeper analysis
-2. **SQL:**
-   2.1 Verify data import accuracy and completeness
-   2.2 Check for data type consistency
-   2.3 Validate categorical values and ranges
-   2.4 Analysis:
+## Project Goals
+- Gain a comprehensive understanding of current rental prices across different regions and cities in Ukraine.
+- Identify trends and patterns in rental prices (e.g., how do prices vary by number of rooms, location, amenities,year?).
+- Compare prices across different platforms to see if there are significant discrepancies.
+- Develop a robust data pipeline from web scraping to interactive visualization.
+- Ultimately, make more informed decisions about renting an apartment in Ukraine (for myself and anyone else who finds this useful!).
 
-   - Salary analysis by job category
-   - Experience level impact on compensation
-   - Geographic salary variations by continent and country
-   - Remote work vs. on-site salary comparisons
-   - Company size correlation with salary levels
-     2.5 Advanced Analysis:
-   - Window functions for salary rankings and percentiles
-   - Aggregations for statistical summaries (median, quartiles, standard deviation)
-     2.6 Create reusable views for common analysis patterns
-     2.7 Add indexes for frequently queried columns
+## Listing websites
+- OLX https://www.olx.ua/uk/nedvizhimost/kvartiry/dolgosrochnaya-arenda-kvartir/?currency=UAH
+- Dom.ria https://dom.ria.com/uk/arenda-kvartir/kiev/
+- Lun.ua https://lun.ua/rent/kyiv/flats
 
-3. **Power BI:**
-   3.1 Data Modeling: Creating relationships, calculated columns, and DAX measures
-   3.2 Interactive Dashboard Development: Building user-friendly, filterable visualizations
-   3.3 Advanced Analytics: Trend analysis, forecasting, and what-if scenarios
-   3.4 Performance Tuning: Optimizing dashboard load times and responsiveness
-   3.5 Deployment & Sharing: Publishing to Power BI Service with appropriate security settings
+## Technologies Used
+- Python: The powerhouse for web scraping, data cleaning, and initial analysis.
+- SQL (PostgreSQL): For storing the scraped data in a structured and queryable format.
+- Power BI: To create interactive dashboards and visualizations that bring our data to life and make it easy to explore trends and insights.
+
+## What I Hope to Discover
+- Average rent prices per square meter in Kyiv, Lviv, Odesa, and other major cities.
+- How does the number of rooms impact the price?
+- Are there specific districts or neighborhoods that offer better value?
+- What's the typical price range for a 1-bedroom apartment in a decent area?
+- Can we predict rental prices based on various features?
+
+## Files
+`explore.ipynb`: Python scripts for cleaning and initial data analysis.
+`explore.sql`: SQL scripts for creating views for further Tableau visuals.
+`RentalReportUkraine.pbix`: PowerBI reports with visuals.
+`README.md`: a readme file.
+`images`: folder with images for README.md.
+This files are to big to be on github, you can find them on my [google drive]
+(https://drive.google.com/drive/folders/1qT2l6mCh3A59pGCO-LKB9kHq0-suFRFV?usp=sharing):
+`insert_data.sql` - SQL scripts for creating the database schema and inserting all the values
+`olx_no_pets.csv`: data about Olx rental listings, that do not allow pets.
+`olx_yes_pets.csv`: data about Olx rental listings, that do allow pets.
+`dim_ria.csv`: data about dim.ria rental listings.
+`lun.csv`: data about lun rental listings.
+`sql_ready.csv`: Prepared and cleaned, final version of rental data across all chosen rental websites.
